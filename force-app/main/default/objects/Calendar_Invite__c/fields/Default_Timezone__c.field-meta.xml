@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Timezone__c</fullName>
+    <defaultValue>&quot;GMT-0500 Eastern Standard Time (North America And Caribbean) (EST)&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If the timezone is left blank on an invite and the &quot;Event Organizer&quot; field is set to an org wide email address this is the timezone used in the initial email. You must select a value from the &quot;Event Invite Timezones&quot; Picklist Value Set.</description>
+    <externalId>false</externalId>
+    <label>Default Timezone</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

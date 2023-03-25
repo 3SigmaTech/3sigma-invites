@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>GMT+1030 (LHST)</label>
+    <protected>true</protected>
+    <values>
+        <field>Display_Name__c</field>
+        <value xsi:type="xsd:string">GMT+1030 Lord Howe Standard Time (LHST)</value>
+    </values>
+    <values>
+        <field>Name__c</field>
+        <value xsi:type="xsd:string">Lord Howe Standard Time</value>
+    </values>
+    <values>
+        <field>Offset_Hours__c</field>
+        <value xsi:type="xsd:double">10.0</value>
+    </values>
+    <values>
+        <field>Offset_Minutes__c</field>
+        <value xsi:type="xsd:double">30.0</value>
+    </values>
+    <values>
+        <field>Short_Code__c</field>
+        <value xsi:type="xsd:string">LHST</value>
+    </values>
+</CustomMetadata>

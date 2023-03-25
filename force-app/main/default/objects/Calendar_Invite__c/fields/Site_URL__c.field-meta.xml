@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_URL__c</fullName>
+    <defaultValue>&quot;https://3st-invites-developer-edition.na73.force.com/invite&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Custom url for hosting calendar invites at branded location. You will need to create a Site in Salesforce that corresponds to the below setting. Leave blank to host from regular Salesforce domain (e.g. na1.salesforce.com/apex/).</description>
+    <externalId>false</externalId>
+    <label>Site URL</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

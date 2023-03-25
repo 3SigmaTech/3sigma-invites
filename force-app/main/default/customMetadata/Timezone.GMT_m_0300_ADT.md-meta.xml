@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>GMT-0300 (ADT)</label>
+    <protected>true</protected>
+    <values>
+        <field>Display_Name__c</field>
+        <value xsi:type="xsd:string">&quot;GMT-0300 Atlantic Daylight Time (Caribbean, North America) (ADT)&quot;</value>
+    </values>
+    <values>
+        <field>Name__c</field>
+        <value xsi:type="xsd:string">&quot;Atlantic Daylight Time (Caribbean, North America)&quot;</value>
+    </values>
+    <values>
+        <field>Offset_Hours__c</field>
+        <value xsi:type="xsd:double">3.0</value>
+    </values>
+    <values>
+        <field>Offset_Minutes__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Short_Code__c</field>
+        <value xsi:type="xsd:string">ADT</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,290 @@
+<apex:page controller="CalendarInvite" showHeader="false" sideBar="false" standardStylesheets="false">
+    <apex:includeScript value="/soap/ajax/40.0/connection.js" />
+    <apex:includeScript value="/soap/ajax/40.0/apex.js" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var L_INPUTS = {};
+        function formatDate(date) {
+            var monthNames = [
+                "January", "February", "March",
+                "April", "May", "June", "July",
+                "August", "September", "October",
+                "November", "December"
+            ];
+            var dayNames = [
+                "Sunday", "Monday", "Tuesday",
+                "Wednesday", "Thursday", "Friday", "Saturday"
+            ];
+
+            if (!(date instanceof Date)) {
+                date = new Date(date);
+            }
+
+            var dayIndex = date.getDay();
+            var dname = dayNames[dayIndex];
+            var day = date.getDate();
+            var monthIndex = date.getMonth();
+            var mname = monthNames[monthIndex];
+            var year = date.getFullYear();
+
+            return dname + ', ' + mname + ' ' + day + ', ' + year + ' ' + formatTime(date);
+        }
+
+        function formatTime(date) {
+
+            if (!(date instanceof Date)) {
+                date = new Date(date);
+            }
+
+            var min = date.getMinutes();
+            var hr24 = date.getHours();
+            var hr = hr24 % 12;
+            if (hr == 0) { hr = 12; }
+            var ampm = "<span style='font-variant: small-caps'>am</span>";
+            if (hr24 >= 12) { ampm = "<span style='font-variant: small-caps'>pm</span>"; }
+
+            return hr + ':' + (min <= 9 ? '0' : '') + min + ampm;
+        }
+
+        function isSameDay(d1, d2) {
+            if (!(d1 instanceof Date)) {
+                d1 = new Date(d1);
+            }
+            if (!(d2 instanceof Date)) {
+                d2 = new Date(d2);
+            }
+            if (d1.getDate() == d2.getDate()) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        $(document).ready(function () {
+            var urlParameters = location.search.substring(1);
+            var params = {};
+            if (urlParameters.length > 0) {
+                params = JSON.parse('{"' + decodeURI(urlParameters).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+            }
+
+            if (
+                (params == null || params === undefined || params == {})
+                || (params.eirId == null || params.eirId === undefined || params.eirId.length < 15)
+                //|| (params.email == null || params.email === undefined || params.email.length < 1)
+                //|| (params.eiId == null || params.eiId === undefined || params.eiId.length < 15)
+            ) {
+                alert('Invalid URL. Please follow the link as it was sent to you.');
+            }
+
+            L_INPUTS = {
+                eirId: params.eirId
+            };
+
+            if (params.action == "respond") {
+                R_INPUTS = {
+                    inputs: L_INPUTS,
+                    response: params.response
+                };
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CalendarInvite.UpdateResponse}',
+                    JSON.stringify(R_INPUTS),
+                    handleUpdate
+                );
+            }
+            else {
+                debugger;
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CalendarInvite.LoadResponseDetail}',
+                    JSON.stringify(L_INPUTS),
+                    setTimesToLocal
+                );
+            }
+
+            $("#sendYes").bind('click', function (e) {
+                e.preventDefault();
+                var pass = {
+                    response: 'Accepted',
+                    note: $("#note").val(),
+                    inputs: L_INPUTS
+                }
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CalendarInvite.UpdateResponse}',
+                    JSON.stringify(pass),
+                    handleUpdate
+                );
+            });
+            $("#sendMaybe").bind('click', function (e) {
+                e.preventDefault();
+                var pass = {
+                    response: 'Undecided',
+                    note: $("#note").val(),
+                    inputs: L_INPUTS
+                }
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CalendarInvite.UpdateResponse}',
+                    JSON.stringify(pass),
+                    handleUpdate
+                );
+            });
+            $("#sendNo").bind('click', function (e) {
+                e.preventDefault();
+                var pass = {
+                    response: 'Declined',
+                    note: $("#note").val(),
+                    inputs: L_INPUTS
+                }
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CalendarInvite.UpdateResponse}',
+                    JSON.stringify(pass),
+                    handleUpdate
+                );
+            });
+
+            $(".showSendInvite").unbind('click').bind('click', function (e) {
+                e.preventDefault();
+                $("#newInvitees").show();
+                addAnotherInvitee();
+            });
+
+            if (params.action == 'inviteOthers') {
+                // Triggering the click caused it to run twice; I do not know why
+                //$(".showSendInvite").click();
+                //$(".showSendInvite").trigger('click');
+                $("#newInvitees").show();
+                addAnotherInvitee();
+            }
+        });
+
+        function setTimesToLocal(result) {
+            result = JSON.parse($('<div/>').html(result).text());
+            if (result.success == false) {
+                $('#error').show();
+                return;
+            }
+            var fromtoHtml = "";
+            if (isSameDay(result.startdt, result.enddt)) {
+                fromtoHtml = formatDate(result.startdt)
+                    + " - "
+                    + formatTime(result.enddt);
+            }
+            else {
+                fromtoHtml = formatDate(result.startdt)
+                    + " - "
+                    + formatDate(result.enddt);
+            }
+            $("#fromto").html(fromtoHtml);
+
+            var numRes = result.respondents.length;
+            var dtSpans = $("#detailstable .responsedate");
+            for (var ndx = 0; ndx < numRes; ndx++) {
+                var inv = result.respondents[ndx];
+                $(dtSpans[ndx]).html(formatDate(inv.responsedate));
+            }
+            var jstz = new Date().toString().match(/([A-Z]+[\+-][0-9]+.*)/)[1]
+
+            if (jstz != result.timezoneshort) {
+                var pass = {
+                    timezone: jstz,
+                    inputs: result.inputs
+                }
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CalendarInvite.UpdateTimezone}',
+                    JSON.stringify(pass),
+                    handleTimezoneUpdate
+                );
+            }
+        }
+
+        function sendInvites() {
+            //$('#btnSendInvites').prop("disabled",true);
+            var table = document.getElementById("inviteList");
+            var invitees = [];
+            for (var i = 0; i < table.rows.length; i++) {
+                var row = table.rows[i];
+                var invitee = {
+                    firstname: row.cells[0].firstChild.value,
+                    lastname: row.cells[1].firstChild.value,
+                    email: row.cells[2].firstChild.value,
+                    company: row.cells[3].firstChild.value,
+                    title: row.cells[4].firstChild.value
+                };
+                invitees.push(invitee);
+            }
+            var pass = {
+                inputs: L_INPUTS,
+                newinvitees: invitees
+            };
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.CalendarInvite.SendInvites}',
+                JSON.stringify(pass),
+                handleUpdate
+            );
+        }
+
+        function handleTimezoneUpdate(result) {
+            result = JSON.parse($('<div/>').html(result).text());
+
+            if (result.success == true) {
+                location.reload();
+                $("#timezoneAlert").html("We have updated our records to ensure future event emails reflect this timezone.");
+                $("#timezone").html(result.inputs.timezone);
+            }
+            else {
+                console.log("The following error has occurred: \n" + result.error);
+            }
+        }
+
+
+        function handleUpdate(result) {
+            result = JSON.parse($('<div/>').html(result).text());
+
+            if (result.success == true) {
+                window.location.replace(window.location.href.replace('action=respond', 'action=complete'));
+            }
+            else {
+                alert("The following error has occurred: \n" + result.error);
+            }
+        }
+
+        function addAnotherInvitee() {
+            var nI = '';
+            nI += '<tr style="line-height:0;">'
+                + '<td>'
+                + '<input type="text" placeholder="*First Name" />'
+                + '</td>'
+                + '<td>'
+                + '<input type="text" placeholder="*Last Name" />'
+                + '</td>'
+                + '<td>'
+                + '<input type="text" placeholder="*Email" />'
+                + '</td>'
+                + '<td>'
+                + '<input type="text" placeholder="Company" />'
+                + '</td>'
+                + '<td>'
+                + '<input type="text" placeholder="Title" />'
+                + '</td>'
+                + '<td style="text-align: center;">'
+                + '<p style="cursor:pointer;padding-bottom:5px;" onclick="removeRow(this);">×</p>'
+                + '</td>'
+                + '</tr>';
+            //$("#inviteList").html($("#inviteList").html() + nI);
+            $("#inviteList").append(nI);
+            $("#inviteList tr:last > td:first > input:first-child")[0].focus();
+        }
+
+        function removeRow(e) {
+            $(e).parent().parent().remove();
+        }
+
+
+    </script>
+
+    <title>RSVP</title>
+
+    <!--<c:CalendarInviteDetail eiIdValue="{!$CurrentPage.parameters.eiId}" isEmailValue="false" eirIdValue="{!$CurrentPage.parameters.eirId}" emailValue="{!$CurrentPage.parameters.email}"/>-->
+    <c:CalendarInviteDetail isEmailValue="false" eirIdValue="{!$CurrentPage.parameters.eirId}" />
+
+</apex:page>

@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>GMT+1400 Western Samoa Daylight Time (WSDT)</fullName>
+        <default>false</default>
+        <label>GMT+1400 Western Samoa Daylight Time (WSDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1400 Line Islands Time (LINT)</fullName>
+        <default>false</default>
+        <label>GMT+1400 Line Islands Time (LINT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1345 Chatham Island Daylight Time (CHADT)</fullName>
+        <default>false</default>
+        <label>GMT+1345 Chatham Island Daylight Time (CHADT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1300 Western Samoa Time (Standard Time) (WST)</fullName>
+        <default>false</default>
+        <label>GMT+1300 Western Samoa Time (Standard Time) (WST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1300 Tonga Time (TOT)</fullName>
+        <default>false</default>
+        <label>GMT+1300 Tonga Time (TOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1300 Tokelau Time (TKT)</fullName>
+        <default>false</default>
+        <label>GMT+1300 Tokelau Time (TKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1300 Phoenix Island Time (PHOT)</fullName>
+        <default>false</default>
+        <label>GMT+1300 Phoenix Island Time (PHOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1300 New Zealand Daylight Time (NZDT)</fullName>
+        <default>false</default>
+        <label>GMT+1300 New Zealand Daylight Time (NZDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1300 Fiji Summer Time (FJST)</fullName>
+        <default>false</default>
+        <label>GMT+1300 Fiji Summer Time (FJST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1245 Chatham Island Standard Time (CHAST)</fullName>
+        <default>false</default>
+        <label>GMT+1245 Chatham Island Standard Time (CHAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Wallis And Futuna Time (WFT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Wallis And Futuna Time (WFT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Wake Island Time (WAKT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Wake Island Time (WAKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Tuvalu Time (TVT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Tuvalu Time (TVT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 New Zealand Standard Time (NZST)</fullName>
+        <default>false</default>
+        <label>GMT+1200 New Zealand Standard Time (NZST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Nauru Time (NRT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Nauru Time (NRT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Marshall Islands Time (MHT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Marshall Islands Time (MHT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Magadan Summer Time (MAGST)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Magadan Summer Time (MAGST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Kamchatka Time (PETT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Kamchatka Time (PETT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Gilbert Island Time (GILT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Gilbert Island Time (GILT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Fiji Time (FJT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Fiji Time (FJT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1200 Anadyr Time (Russia) (ANAT)</fullName>
+        <default>false</default>
+        <label>GMT+1200 Anadyr Time (Russia) (ANAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1130 Norfolk Time (NFT)</fullName>
+        <default>false</default>
+        <label>GMT+1130 Norfolk Time (NFT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Vladivostok Summer Time (VLAST)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Vladivostok Summer Time (VLAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Vanuatu Time (VUT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Vanuatu Time (VUT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Solomon Islands Time (SBT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Solomon Islands Time (SBT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Sakhalin Time (SAKT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Sakhalin Time (SAKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Pohnpei Time (Formerly Ponape) (PONT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Pohnpei Time (Formerly Ponape) (PONT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 New Caledonia Time (NCT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 New Caledonia Time (NCT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Magadan Time (MAGT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Magadan Time (MAGT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Macquarie Island Station Time (MIST)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Macquarie Island Station Time (MIST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Lord Howe Daylight Time (LHDT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Lord Howe Daylight Time (LHDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Kosrae Time (Micronesia) (KOST)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Kosrae Time (Micronesia) (KOST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1100 Eastern Daylight Time (Australia And Pacific) (EDT)</fullName>
+        <default>false</default>
+        <label>GMT+1100 Eastern Daylight Time (Australia And Pacific) (EDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1030 Lord Howe Standard Time (LHST)</fullName>
+        <default>false</default>
+        <label>GMT+1030 Lord Howe Standard Time (LHST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1030 Central Daylight Time (Australia) (CDT)</fullName>
+        <default>false</default>
+        <label>GMT+1030 Central Daylight Time (Australia) (CDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Yakutsk Summer Time (YAKST)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Yakutsk Summer Time (YAKST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Vladivostok Time (VLAT)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Vladivostok Time (VLAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Papua New Guinea Time (PGT)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Papua New Guinea Time (PGT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Eastern Standard Time (Australia And Pacific) (EST)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Eastern Standard Time (Australia And Pacific) (EST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Dumont D &apos;Urville Time (DDUT)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Dumont D &apos;Urville Time (DDUT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Chuuk Time (CHUT)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Chuuk Time (CHUT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+1000 Chamorro Standard Time (ChST)</fullName>
+        <default>false</default>
+        <label>GMT+1000 Chamorro Standard Time (ChST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0930 Central Standard Time (Australia) (CST)</fullName>
+        <default>false</default>
+        <label>GMT+0930 Central Standard Time (Australia) (CST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 Yakutsk Time (YAKT)</fullName>
+        <default>false</default>
+        <label>GMT+0900 Yakutsk Time (YAKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 Palau Time (PWT)</fullName>
+        <default>false</default>
+        <label>GMT+0900 Palau Time (PWT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 Korea Standard Time (KST)</fullName>
+        <default>false</default>
+        <label>GMT+0900 Korea Standard Time (KST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 Japan Standard Time (JST)</fullName>
+        <default>false</default>
+        <label>GMT+0900 Japan Standard Time (JST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 Irkutsk Summer Time (IRKST)</fullName>
+        <default>false</default>
+        <label>GMT+0900 Irkutsk Summer Time (IRKST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 Eastern Indonesian Time (WIT)</fullName>
+        <default>false</default>
+        <label>GMT+0900 Eastern Indonesian Time (WIT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0900 East Timor Time (Timor-Leste Time) (TLT)</fullName>
+        <default>false</default>
+        <label>GMT+0900 East Timor Time (Timor-Leste Time) (TLT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0845 Central Western Australia Time (Eucla) (CWST)</fullName>
+        <default>false</default>
+        <label>GMT+0845 Central Western Australia Time (Eucla) (CWST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Western Standard Time (Australia) (WST)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Western Standard Time (Australia) (WST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Ulaanbaatar Time (ULAT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Ulaanbaatar Time (ULAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Singapore Time (SGT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Singapore Time (SGT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Philippine Time (PHT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Philippine Time (PHT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Malaysia Time (MYT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Malaysia Time (MYT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Krasnoyarsk Summer Time (KRAST)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Krasnoyarsk Summer Time (KRAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Irkutsk Time (IRKT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Irkutsk Time (IRKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Hong Kong Time (HKT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Hong Kong Time (HKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Choibalsan Time (Mongolia) (CHOT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Choibalsan Time (Mongolia) (CHOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 China Standard Time (CST)</fullName>
+        <default>false</default>
+        <label>GMT+0800 China Standard Time (CST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Central Indonesian Time (WITA)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Central Indonesian Time (WITA)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0800 Brunei Time (BNT)</fullName>
+        <default>false</default>
+        <label>GMT+0800 Brunei Time (BNT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Western Indonesian Time (WIB)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Western Indonesian Time (WIB)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Omsk Summer Time (OMSST)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Omsk Summer Time (OMSST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Novosibirsk Summer Time (NOVST)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Novosibirsk Summer Time (NOVST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Krasnoyarsk Time (KRAT)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Krasnoyarsk Time (KRAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Indochina Time (ICT)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Indochina Time (ICT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Hovd Time (Mongolia) (HOVT)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Hovd Time (Mongolia) (HOVT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Davis Time (Antarctica) (DAVT)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Davis Time (Antarctica) (DAVT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0700 Christmas Island Time (CXT)</fullName>
+        <default>false</default>
+        <label>GMT+0700 Christmas Island Time (CXT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0630 Myanmar Time (MMT)</fullName>
+        <default>false</default>
+        <label>GMT+0630 Myanmar Time (MMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0630 Cocos Islands Time (CCT)</fullName>
+        <default>false</default>
+        <label>GMT+0630 Cocos Islands Time (CCT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Yekaterinburg Summer Time (YEKST)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Yekaterinburg Summer Time (YEKST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Vostok Time (VOST)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Vostok Time (VOST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Qyzylorda Time (Kazakhstan) (QYZT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Qyzylorda Time (Kazakhstan) (QYZT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Omsk Standard Time (OMST)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Omsk Standard Time (OMST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Novosibirsk Time (NOVT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Novosibirsk Time (NOVT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Kyrgyzstan Time (KGT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Kyrgyzstan Time (KGT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Indian Chagos Time (British Indian Ocean Territory) (IOT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Indian Chagos Time (British Indian Ocean Territory) (IOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Bhutan Time (BTT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Bhutan Time (BTT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Bangladesh Time (Also See Bst) (BDT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Bangladesh Time (Also See Bst) (BDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0600 Alma-Ata Time (ALMT)</fullName>
+        <default>false</default>
+        <label>GMT+0600 Alma-Ata Time (ALMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0545 Nepal Time (NPT)</fullName>
+        <default>false</default>
+        <label>GMT+0545 Nepal Time (NPT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0530 Indian Standard Time (IST)</fullName>
+        <default>false</default>
+        <label>GMT+0530 Indian Standard Time (IST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Yekaterinburg Time (YEKT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Yekaterinburg Time (YEKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Uzbekistan Time (UZT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Uzbekistan Time (UZT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Turkmenistan Time (TMT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Turkmenistan Time (TMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Tajikistan Time (TJT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Tajikistan Time (TJT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Pakistan Standard Time (PKT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Pakistan Standard Time (PKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Oral Time (ORAT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Oral Time (ORAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Mawson Station Time (Antarctic) (MAWT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Mawson Station Time (Antarctic) (MAWT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Maldives Time (MVT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Maldives Time (MVT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 French Southern And Antarctic Territories Time (TFT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 French Southern And Antarctic Territories Time (TFT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Azerbaijan Summer Time (AZST)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Azerbaijan Summer Time (AZST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0500 Aqtobe Time (Kazakhstan) (AQTT)</fullName>
+        <default>false</default>
+        <label>GMT+0500 Aqtobe Time (Kazakhstan) (AQTT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0430 Iran Daylight Time (IRDT)</fullName>
+        <default>false</default>
+        <label>GMT+0430 Iran Daylight Time (IRDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0430 Afghanistan Time (AFT)</fullName>
+        <default>false</default>
+        <label>GMT+0430 Afghanistan Time (AFT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Volgograd Time (VOLT)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Volgograd Time (VOLT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Seychelles Time (SCT)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Seychelles Time (SCT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Samara Time (SAMT)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Samara Time (SAMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Reunion Time (RET)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Reunion Time (RET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Moscow Summer Time (MSK)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Moscow Summer Time (MSK)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Mauritius Time (MUT)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Mauritius Time (MUT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Gulf Standard Time (GST)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Gulf Standard Time (GST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Georgia Standard Time (GET)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Georgia Standard Time (GET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Azerbaijan Time (AZT)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Azerbaijan Time (AZT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0400 Armenia Time (AMT)</fullName>
+        <default>false</default>
+        <label>GMT+0400 Armenia Time (AMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0330 Iran Standard Time (IRST)</fullName>
+        <default>false</default>
+        <label>GMT+0330 Iran Standard Time (IRST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0300 Syowa (Research Station) Time (Antarctica) (SYOT)</fullName>
+        <default>false</default>
+        <label>GMT+0300 Syowa (Research Station) Time (Antarctica) (SYOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0300 Israel Daylight Time (IDT)</fullName>
+        <default>false</default>
+        <label>GMT+0300 Israel Daylight Time (IDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0300 Further-Eastern European Time (FET)</fullName>
+        <default>false</default>
+        <label>GMT+0300 Further-Eastern European Time (FET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0300 Eastern European Summer Time (EEST)</fullName>
+        <default>false</default>
+        <label>GMT+0300 Eastern European Summer Time (EEST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0300 East Africa Time (EAT)</fullName>
+        <default>false</default>
+        <label>GMT+0300 East Africa Time (EAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0300 Arab Standard Time (AST)</fullName>
+        <default>false</default>
+        <label>GMT+0300 Arab Standard Time (AST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 West Africa Summer Time (WAST)</fullName>
+        <default>false</default>
+        <label>GMT+0200 West Africa Summer Time (WAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 South Africa Standard Time (SAST)</fullName>
+        <default>false</default>
+        <label>GMT+0200 South Africa Standard Time (SAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 Middle European Summer Time (MEST)</fullName>
+        <default>false</default>
+        <label>GMT+0200 Middle European Summer Time (MEST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 Israel Standard Time (IST)</fullName>
+        <default>false</default>
+        <label>GMT+0200 Israel Standard Time (IST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 Eastern European Time (EET)</fullName>
+        <default>false</default>
+        <label>GMT+0200 Eastern European Time (EET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 Central European Summer Time (CEST)</fullName>
+        <default>false</default>
+        <label>GMT+0200 Central European Summer Time (CEST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0200 Central Africa Time (CAT)</fullName>
+        <default>false</default>
+        <label>GMT+0200 Central Africa Time (CAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0100 Western European Summer Time (WEST)</fullName>
+        <default>false</default>
+        <label>GMT+0100 Western European Summer Time (WEST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0100 West Africa Time (WAT)</fullName>
+        <default>false</default>
+        <label>GMT+0100 West Africa Time (WAT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0100 Middle European Time (MET)</fullName>
+        <default>false</default>
+        <label>GMT+0100 Middle European Time (MET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0100 Irish Standard Time (Ist Is Used During Daylight Saving Time) (IST)</fullName>
+        <default>false</default>
+        <label>GMT+0100 Irish Standard Time (Ist Is Used During Daylight Saving Time) (IST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0100 Central European Time (Standard Time) (CET)</fullName>
+        <default>false</default>
+        <label>GMT+0100 Central European Time (Standard Time) (CET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0100 British Summer Time (BST)</fullName>
+        <default>false</default>
+        <label>GMT+0100 British Summer Time (BST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0000 Western European Time (WET)</fullName>
+        <default>false</default>
+        <label>GMT+0000 Western European Time (WET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0000 Greenwich Mean Time (GMT)</fullName>
+        <default>false</default>
+        <label>GMT+0000 Greenwich Mean Time (GMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0000 Eastern Greenland Summer Time (EGST)</fullName>
+        <default>false</default>
+        <label>GMT+0000 Eastern Greenland Summer Time (EGST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0000 Coordinated Universal Time (UTC)</fullName>
+        <default>false</default>
+        <label>GMT+0000 Coordinated Universal Time (UTC)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT+0000 Azores Summer Time (AZOST)</fullName>
+        <default>false</default>
+        <label>GMT+0000 Azores Summer Time (AZOST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0100 Eastern Greenland Time (EGT)</fullName>
+        <default>false</default>
+        <label>GMT-0100 Eastern Greenland Time (EGT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0100 Cape Verde Time (CVT)</fullName>
+        <default>false</default>
+        <label>GMT-0100 Cape Verde Time (CVT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0100 Azores Time (AZOT)</fullName>
+        <default>false</default>
+        <label>GMT-0100 Azores Time (AZOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0200 Western Greenland Summer Time (WGST)</fullName>
+        <default>false</default>
+        <label>GMT-0200 Western Greenland Summer Time (WGST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0200 Uruguay Summer Time (UYST)</fullName>
+        <default>false</default>
+        <label>GMT-0200 Uruguay Summer Time (UYST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0200 South Georgia Time (South Georgia And The South Sandwich Islands) (GST)</fullName>
+        <default>false</default>
+        <label>GMT-0200 South Georgia Time (South Georgia And The South Sandwich Islands) (GST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0200 Pierre &amp; Miquelon Daylight Time (PMDT)</fullName>
+        <default>false</default>
+        <label>GMT-0200 Pierre &amp; Miquelon Daylight Time (PMDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0200 Fernando De Noronha (FNT)</fullName>
+        <default>false</default>
+        <label>GMT-0200 Fernando De Noronha (FNT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0200 Brasilia Summer Time (BRST)</fullName>
+        <default>false</default>
+        <label>GMT-0200 Brasilia Summer Time (BRST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0230 Newfoundland Daylight Time (NDT)</fullName>
+        <default>false</default>
+        <label>GMT-0230 Newfoundland Daylight Time (NDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Western Greenland Time (WGT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Western Greenland Time (WGT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Uruguay Standard Time (UYT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Uruguay Standard Time (UYT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Suriname Time (SRT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Suriname Time (SRT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Rothera (Research Station) Time (Antarctica) (ROTT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Rothera (Research Station) Time (Antarctica) (ROTT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Pierre &amp; Miquelon Standard Time (PMST)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Pierre &amp; Miquelon Standard Time (PMST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Paraguay Summer Time (PYST)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Paraguay Summer Time (PYST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 French Guiana Time (GFT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 French Guiana Time (GFT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Falkland Islands Summer Time (FKST)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Falkland Islands Summer Time (FKST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Chile Summer Time (CLST)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Chile Summer Time (CLST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Brasilia Time (BRT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Brasilia Time (BRT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Atlantic Daylight Time (Caribbean, North America) (ADT)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Atlantic Daylight Time (Caribbean, North America) (ADT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Argentina Time (ART)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Argentina Time (ART)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0300 Amazon Summer Time (AMST)</fullName>
+        <default>false</default>
+        <label>GMT-0300 Amazon Summer Time (AMST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0330 Newfoundland Standard Time (NST)</fullName>
+        <default>false</default>
+        <label>GMT-0330 Newfoundland Standard Time (NST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Paraguay Time (PYT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Paraguay Time (PYT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Guyana Time (GYT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Guyana Time (GYT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Eastern Daylight Time (North America And Caribbean) (EDT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Eastern Daylight Time (North America And Caribbean) (EDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Cuba Daylight Time (CDT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Cuba Daylight Time (CDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Chile Standard Time (CLT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Chile Standard Time (CLT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Bolivia Time (BOT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Bolivia Time (BOT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Atlantic Standard Time (Caribbean, North America) (AST)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Atlantic Standard Time (Caribbean, North America) (AST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0400 Amazon Time (AMT)</fullName>
+        <default>false</default>
+        <label>GMT-0400 Amazon Time (AMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0430 Venezuelan Standard Time (VET)</fullName>
+        <default>false</default>
+        <label>GMT-0430 Venezuelan Standard Time (VET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Peru Time (PET)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Peru Time (PET)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Ecuador Time (ECT)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Ecuador Time (ECT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Eastern Standard Time (North America And Caribbean) (EST)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Eastern Standard Time (North America And Caribbean) (EST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Eastern Island Summer Time (EASST)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Eastern Island Summer Time (EASST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Cuba Standard Time (CST)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Cuba Standard Time (CST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Colombia Time (COT)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Colombia Time (COT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0500 Central Daylight Time (North America &amp; Caribbean) (CDT)</fullName>
+        <default>false</default>
+        <label>GMT-0500 Central Daylight Time (North America &amp; Caribbean) (CDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0600 Mountain Daylight Time (North America) (MDT)</fullName>
+        <default>false</default>
+        <label>GMT-0600 Mountain Daylight Time (North America) (MDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0600 Galapagos Time (GALT)</fullName>
+        <default>false</default>
+        <label>GMT-0600 Galapagos Time (GALT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0600 Eastern Island Standard Time (EAST)</fullName>
+        <default>false</default>
+        <label>GMT-0600 Eastern Island Standard Time (EAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0600 Central Standard Time (North America &amp; Central America) (CST)</fullName>
+        <default>false</default>
+        <label>GMT-0600 Central Standard Time (North America &amp; Central America) (CST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0700 Pacific Daylight Time (North America) (PDT)</fullName>
+        <default>false</default>
+        <label>GMT-0700 Pacific Daylight Time (North America) (PDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0700 Mountain Standard Time (North America) (MST)</fullName>
+        <default>false</default>
+        <label>GMT-0700 Mountain Standard Time (North America) (MST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0800 Pacific Standard Time (North America) (PST)</fullName>
+        <default>false</default>
+        <label>GMT-0800 Pacific Standard Time (North America) (PST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0800 Metlakatla (Alaska Indian Community) (MeST)</fullName>
+        <default>false</default>
+        <label>GMT-0800 Metlakatla (Alaska Indian Community) (MeST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0800 Alaska Daylight Time (AKDT)</fullName>
+        <default>false</default>
+        <label>GMT-0800 Alaska Daylight Time (AKDT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0900 Hawaii-Aleutian Daylight Time (HADT)</fullName>
+        <default>false</default>
+        <label>GMT-0900 Hawaii-Aleutian Daylight Time (HADT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0900 Gambier Time (GAMT)</fullName>
+        <default>false</default>
+        <label>GMT-0900 Gambier Time (GAMT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0900 Alaska Standard Time (AKST)</fullName>
+        <default>false</default>
+        <label>GMT-0900 Alaska Standard Time (AKST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-0930 Marquesas Time (MART)</fullName>
+        <default>false</default>
+        <label>GMT-0930 Marquesas Time (MART)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-1000 Tahiti Time (TAHT)</fullName>
+        <default>false</default>
+        <label>GMT-1000 Tahiti Time (TAHT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-1000 Hawaii-Aleutian Standard Time (HAST)</fullName>
+        <default>false</default>
+        <label>GMT-1000 Hawaii-Aleutian Standard Time (HAST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-1000 Hawaii Standard Time (HST)</fullName>
+        <default>false</default>
+        <label>GMT-1000 Hawaii Standard Time (HST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-1000 Cook Island Time (CKT)</fullName>
+        <default>false</default>
+        <label>GMT-1000 Cook Island Time (CKT)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-1100 Samoa Standard Time (American Samoa) (SST)</fullName>
+        <default>false</default>
+        <label>GMT-1100 Samoa Standard Time (American Samoa) (SST)</label>
+    </customValue>
+    <customValue>
+        <fullName>GMT-1100 Niue Time (NUT)</fullName>
+        <default>false</default>
+        <label>GMT-1100 Niue Time (NUT)</label>
+    </customValue>
+    <masterLabel>Event Invite Timezones</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

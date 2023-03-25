@@ -1,0 +1,23 @@
+<apex:page standardController="EventInviteResponse__c" extensions="CalendarInvitePages" showHeader="false" sideBar="false" standardStylesheets="false">
+<!-- action="{!CancelInvite}"> -->
+
+<script>
+    function init()
+    {
+        var answer = confirm("Are you sure you wish to cancel this invitation?")
+        if (answer) {
+            CallAction();
+        }
+        else {
+            window.history.back();
+        }
+    }
+</script>
+
+    <apex:form >
+        <body onload="init()"></body>
+        <apex:inputHidden value="{!EventInviteResponse__c.event_invite__c}"/>
+        <apex:inputHidden value="{!EventInviteResponse__c.Invitee__c}"/>
+        <apex:actionFunction name="CallAction" action="{!CancelInvite}" onComplete="alert('Invite cancellation email sent!') ;"/>
+    </apex:form>
+</apex:page>

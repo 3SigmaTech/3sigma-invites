@@ -1,0 +1,46 @@
+<apex:component controller="CalendarInvitePages" access="global">
+  <apex:attribute name="eiIdValue" description="Event Invite ID" type="String" required="required" assignTo="{!eiId}" />
+  <apex:attribute name="eirIdValue" description="Event Invite Response ID" type="String" required="required" assignTo="{!eirId}" />
+  <apex:attribute name="emailValue" description="Event Invite Response Recipient Email" type="String" required="required" assignTo="{!email}" />
+  <apex:attribute name="isEmailValue" description="Am I loading this component from email?" type="Boolean" required="required" assignTo="{!isEmail}" />
+  <apex:variable var="eirDetail" value="{!ResponseDetails}"/>BEGIN:VCALENDAR
+PRODID::-//3Sigma//Invites v1.0//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:<apex:outputText value="{!eirDetail.method}"/>
+BEGIN:VEVENT
+DTSTART:<apex:outputText value="{!eirDetail.startdtStr}"/>
+DTEND:<apex:outputText value="{!eirDetail.enddtStr}"/>
+DTSTAMP:<apex:outputText value="{!eirDetail.nowStr}"/>
+ORGANIZER;CN=<apex:outputText value="{!eirDetail.organizer}"/>:
+MAILTO:<apex:outputText value="{!eirDetail.organizer_email}"/>
+UID:<apex:outputText value="{!eirId}"/>
+<apex:repeat var="invitee" value="{!eirDetail.respondents}">
+ATTENDEE;
+ CUTYPE=INDIVIDUAL;
+ ROLE=REQ-PARTICIPANT;
+ PARTSTAT=<apex:outputText value="{!invitee.participant_status}"/>;
+ RSVP=TRUE;
+ CN={!invitee.firstname} {!invitee.lastname};
+ X-NUM-GUESTS=0:
+ mailto:{!invitee.email}
+</apex:repeat>
+CREATED:<apex:outputText value="{!eirDetail.nowStr}"/>
+SUMMARY:<apex:outputText value="{!eirDetail.subject}"/>
+DESCRIPTION:<apex:outputText value="{!JSENCODE(eirDetail.description)}" escape="false"/>
+\n\n<!--
+<apex:outputText value="{!eirDetail.detailURL}" escape="false"/>-->
+LAST-MODIFIED:<apex:outputText value="{!eirDetail.nowStr}"/>
+LOCATION:
+<apex:outputText value="{!eirDetail.location}"/>
+SEQUENCE:0
+STATUS:<apex:outputText value="{!eirDetail.status}"/>
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+</apex:component>

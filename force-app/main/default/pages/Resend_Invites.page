@@ -1,0 +1,4 @@
+<apex:page standardController="EventInvite__c" extensions="CalendarInvitePages" showHeader="false" sideBar="false" standardStylesheets="false" action="{!ResendInvites}">
+    <apex:form >
+    </apex:form>
+</apex:page>

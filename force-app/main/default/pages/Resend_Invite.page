@@ -1,0 +1,6 @@
+<apex:page standardController="EventInviteResponse__c" extensions="CalendarInvitePages" showHeader="false" sideBar="false" standardStylesheets="false" action="{!ResendInvite}">
+    <apex:form >
+        <apex:inputHidden value="{!EventInviteResponse__c.event_invite__c}"/>
+        <apex:inputHidden value="{!EventInviteResponse__c.Invitee__c}"/>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,245 @@
+<apex:component controller="CalendarInvitePages" access="global">
+  <apex:attribute name="eiIdValue" description="Event Invite ID" type="String" required="false" assignTo="{!eiId}" />
+  <apex:attribute name="eirIdValue" description="Event Invite Response ID" type="String" required="required" assignTo="{!eirId}" />
+  <apex:attribute name="emailValue" description="Event Invite Response Recipient Email" type="String" required="false" assignTo="{!email}" />
+  <apex:attribute name="isEmailValue" description="Am I loading this component from email?" type="Boolean" required="required" assignTo="{!isEmail}" />
+
+  <apex:variable var="eirDetail" value="{!ResponseDetails}"/>
+  
+  <div itemscope="itemscope" itemtype="http://schema.org/Event">
+    <meta itemprop="name" content="{!eirDetail.subject}"/>
+    <meta itemprop="startDate" content="{!eirDetail.startdt}"/>
+    <meta itemprop="endDate" content="{!eirDetail.enddt}"/>
+    <div itemprop="location" itemscope="itemscope" itemtype="http://schema.org/Place">
+      <div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="name" content="{!eirDetail.location}"/>
+        <!--
+        <meta itemprop="streetAddress" content="24 Willie Mays Plaza"/>
+        <meta itemprop="addressLocality" content="San Francisco"/>
+        <meta itemprop="addressRegion" content="CA"/>
+        <meta itemprop="postalCode" content="94107"/>
+        <meta itemprop="addressCountry" content="USA"/>
+        -->
+      </div>
+    </div>
+    <div itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/RsvpAction">
+      <div itemprop="handler" itemscope="itemscope" itemtype="http://schema.org/HttpActionHandler">
+        <link itemprop="url" href="{!eirDetail.detailURL}&action=respond&response=Yes"/>
+      </div>
+      <link itemprop="attendance" href="http://schema.org/RsvpAttendance/Yes"/>
+      <meta itemprop="rsvpResponse" content="yes"/>
+    </div>
+    <div itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/RsvpAction">
+      <div itemprop="handler" itemscope="itemscope" itemtype="http://schema.org/HttpActionHandler">
+        <link itemprop="url" href="{!eirDetail.detailURL}&action=respond&response=No"/>
+      </div>
+      <link itemprop="attendance" href="http://schema.org/RsvpAttendance/No"/>
+      <meta itemprop="rsvpResponse" content="no"/>
+    </div>
+    <div itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/RsvpAction">
+      <div itemprop="handler" itemscope="itemscope" itemtype="http://schema.org/HttpActionHandler">
+        <link itemprop="url" href="{!eirDetail.detailURL}&action=respond&response=Maybe"/>
+      </div>
+      <link itemprop="attendance" href="http://schema.org/RsvpAttendance/Maybe"/>
+      <meta itemprop="rsvpResponse" content="maybe"/>
+    </div>
+  </div>
+  
+  <style>
+    h1 {
+      margin: 5px;
+    }
+    #description {
+        margin-left: 5px;
+    }
+    .container {
+      border: #888 solid 1px;
+      padding: 10px;
+      max-width: 750px;
+    }
+    html {
+        display: table;
+        margin: auto;
+    }
+    body {
+        padding-top: 10px;
+        display: table-cell;
+        vertical-align: middle;
+        background-color: #fff;
+    }
+    #boilerplate {
+        background-color: #eee;
+        color: #888;
+        font-size: 0.75em;
+    }
+    #details {
+        border-top-right-radius: 1em;
+        border-top-left-radius: 1em;
+    }
+    #newInvitees {
+
+    }
+    .rowLabel {
+        color: #888;
+        padding-left: 2px;
+    }
+    .response, .responsenote {
+        font-size: 0.8em;
+        color: #888;
+    }
+    .link {
+        font-size: 0.8em;
+    }
+    td {
+        padding: 5px;
+    }
+    input[type=text] {
+      width: 100%;
+      border-radius: 0.25em;
+      border-style: groove;
+    }
+    .spacer {
+      width: 2em;
+      text-align: center;
+      display: inline-block;
+    }
+    button {
+      padding: 5px;
+      margin: 5px;
+      border-radius: 0.25em;
+      border: #888 solid 1px;
+      background-color: #eee;
+    }
+    button:active {
+      vertical-align: top;
+      padding: 6px 5px 4px;
+    }
+    input, button {
+      outline: 0;
+    }
+    .hiddenButton {
+      border: none;
+      background-color: rgba(0,0,0,0);
+      padding: 0;
+      padding-bottom: 5px;
+      margin: 0;
+      font-size: 1.5em;
+      text-align: center;
+      vertical-align: middle;
+      color: rgba(0,0,0,0);
+    }
+    .hiddenButton:hover {
+      color: #000;
+    }
+    .hiddenButton:active {
+      border: none;
+      vertical-align: middle;
+      padding: 0;
+      padding-bottom: 5px;
+    }
+    .alert-danger {
+        background-color: #f2dede;
+        border-color: #ebcccc;
+        color: #a94442;
+    }
+    .alert {
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+  </style>
+  <div id="details" class="container" style="border-width:1px;border-style:solid;border-color:#888;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;max-width:750px;border-top-right-radius:1em;border-top-left-radius:1em;" >
+    <h1 id="subject" style="margin-top:5px;margin-bottom:5px;margin-right:5px;margin-left:5px;" >{!eirDetail.subject}</h1>
+    <p id="description" style="margin-left:5px;" >{!eirDetail.description}</p>
+    <table id="detailstable">
+      <tr>
+          <td class="rowLabel" style="padding-top:5px;padding-bottom:5px;padding-right:5px;color:#888;padding-left:2px;" >When*</td>
+          <td id="fromto" class="rowData" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >
+            <p><apex:outputText value="{!eirDetail.dateTimeString}" escape="false" /></p>
+          </td>
+      </tr>
+      <tr>
+          <td></td>
+          <td style="font-size:0.8em;color:#888;">Times shown in {!RIGHT(eirDetail.timezone, LEN(eirDetail.timezone) - FIND(' ', eirDetail.timezone))}</td>
+      </tr>
+      <tr>
+          <td class="rowLabel" style="padding-top:5px;padding-bottom:5px;padding-right:5px;color:#888;padding-left:2px;" >Where</td>
+          <td class="rowData" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >
+            <span id="location">{!eirDetail.location}</span>
+            <span class='response' style="font-size:0.8em;color:#888;" >(</span>
+            <a href="https://maps.google.com/maps?q={!URLENCODE(eirDetail.location)}&hl=en" class='link' id="locationMap" target="_blank" style="font-size:0.8em;" >map</a>
+            <span class='response' style="font-size:0.8em;color:#888;" >)</span>
+          </td>
+      </tr>
+      <apex:repeat var="invitee" value="{!eirDetail.respondents}">
+        <tr>
+          <td class="rowLabel" style="padding-top:5px;padding-bottom:5px;padding-right:5px;color:#888;padding-left:2px;" >
+            <apex:outputText value="Who" rendered="{!invitee.isMe == true}"/>
+          </td>
+          <td class="rowData" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >
+            <span class="invitee">
+              {!invitee.firstname} {!invitee.lastname}
+            </span>
+            <span class="response" style="font-size:0.8em;color:#888;" >
+              <apex:outputText value="attending" rendered="{!invitee.response == 'Accepted'}"/>
+              <apex:outputText value="not attending" rendered="{!invitee.response == 'Declined'}"/>
+              <apex:outputText value="not sure" rendered="{!invitee.response == 'Undecided'}"/>
+              <apex:outputText value="has not yet responded" rendered="{!invitee.response == 'Not Responded'}"/>
+              as of
+              <span class="responsedate">
+                  <apex:outputText value="{!invitee.responsedatestring}" escape="false" />
+              </span>
+            </span>
+            <span class="responsenote" style="font-size:0.8em;color:#888;" >
+              <apex:outputText value="-" rendered="{!AND(invitee.responsenote != '', invitee.responsenote != null)}"/>
+              {!invitee.responsenote}
+            </span>
+          </td>
+        </tr>
+      </apex:repeat>
+      <apex:outputPanel rendered="{!isEmail == false}">
+        <tr>
+          <td class="rowLabel" style="padding-top:5px;padding-bottom:5px;padding-right:5px;color:#888;padding-left:2px;" ></td>
+          <td class="rowData" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" ><a class="showSendInvite" href="#inviteOthers">Invite Others</a></td>
+        </tr>
+        <tr>
+          <td class="rowLabel" style="padding-top:5px;padding-bottom:5px;padding-right:5px;color:#888;padding-left:2px;" >Going?</td>
+          <td id="noteinput" class="rowData" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >
+            <input id="note" type="text" placeholder="Leave a Note" style="width:100%;border-radius:0.25em;border-style:groove;outline-color:0;" />
+          </td>
+        </tr>
+      </apex:outputPanel>
+      <tr>
+        <td class="rowLabel" style="padding-top:5px;padding-bottom:5px;padding-right:5px;color:#888;padding-left:2px;" ><apex:outputText value="Going?" rendered="{!isEmail == true}"/></td>
+        <td id="actions" class="rowData" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;" >
+          <a href="{!eirDetail.detailURL}&action=respond&response=Accepted" id="sendYes">Yes</a><span class="spacer" style="width:2em;text-align:center;display:inline-block;" >-</span>
+          <a href="{!eirDetail.detailURL}&action=respond&response=Undecided" id="sendMaybe">Maybe</a><span class="spacer" style="width:2em;text-align:center;display:inline-block;" >-</span>
+          <a href="{!eirDetail.detailURL}&action=respond&response=Declined" id="sendNo">No</a>
+          <apex:outputPanel rendered="{!isEmail == true}">
+              <span class="spacer" style="width:2em;text-align:center;display:inline-block;" >-</span>
+              <a href="{!eirDetail.detailURL}">More Options...</a>
+          </apex:outputPanel>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <apex:outputPanel rendered="{!isEmail == false}">
+    <div id="error" class="alert alert-danger" style="display:none;background-color: #f2dede;border-color: #ebcccc;color: #a94442;padding: .75rem 1.25rem;margin-bottom: 1rem;border: 1px solid transparent;border-radius: .25rem;">
+      <strong>Oh snap!</strong> We cannot find a record of this invite. Please be sure to follow a link to the latest invite.
+    </div>
+    <div id="newInvitees" class="container" style="display:none;border-width:1px;border-style:solid;border-color:#888;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;max-width:750px;" >
+      <p class="response" style="font-size:0.8em;color:#888;" >Fields marked with an asterisk (*) are required.</p>
+      <table id="inviteList"></table>
+      <button onclick="addAnotherInvitee();" style="cursor:pointer;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;margin-top:5px;margin-bottom:5px;margin-right:5px;margin-left:5px;border-radius:0.25em;border-width:1px;border-style:solid;border-color:#888;background-color:#eee;outline-color:0;" >Invite More</button>
+      <button id="btnSendInvites" onclick="sendInvites();" style="cursor:pointer;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;margin-top:5px;margin-bottom:5px;margin-right:5px;margin-left:5px;border-radius:0.25em;border-width:1px;border-style:solid;border-color:#888;background-color:#eee;outline-color:0;" >Send Invitations</button>
+    </div>
+  </apex:outputPanel>
+  <div id="boilerplate" class="container" style="border-width:1px;border-style:solid;border-color:#888;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;max-width:750px;background-color:#eee;color:#888;font-size:0.75em;" >
+    <p>Invitation from <a href="{!eirDetail.company_website}" target="_blank">{!eirDetail.company_name}</a></p>
+    <p>You are receiving this email at the account <span id="email">{!eirDetail.inputs.email}</span> because you or your company has chosen to work with {!eirDetail.company_name}.</p>
+    <p>Forwarding this invitation could allow any recipient to modify your RSVP response. To invite additional members please <a class="showSendInvite" href="{!eirDetail.detailURL}&action=inviteOthers">click here</a></p>
+    <p>*Times shown in <span id="timezone">{!eirDetail.timezone}</span>. <span id="timezoneAlert"></span></p>
+
+  </div>
+</apex:component>
